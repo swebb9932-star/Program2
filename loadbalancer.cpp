@@ -27,6 +27,7 @@ request loadbalancer::getRequest()
    if (!requestQueue.empty()) {
       request r = requestQueue.front(); // queue
       // request r = requestQueue.top(); // priority queue, stack
+      requestQueue.pop();
       return r;
    }
    // ignore warning here about no return value
